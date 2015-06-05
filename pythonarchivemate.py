@@ -37,16 +37,11 @@ for dirName, subdirList, fileList in os.walk(rootDir, topdown=False):
     table[total][0]=dirName
     table[total][1]=total_size
     total+=1
-    print(total_size)
+    #print(total_size)
 
 total=total-1
-    ## Advanced usage:
-    ## editing the 'dirnames' list will stop os.walk() from recursing into there.
-#if '.git' in dirnames:
-        ## don't go into any .git directories.
-        #dirnames.remove('.git')
 
-print table
+#print table
 
 dirlist=[0 for i in range(total)]
 
@@ -57,8 +52,8 @@ for i in range (total):
         dirlist[i]=table[i][0]
 
 #total gives the total number of directories that have to be archived
-print total
-print dirlist
+#print total
+#print dirlist
 index=0
 # total_archive_size is used to check whether every archive created is less than the allowed size. for eg. less than 2MB
 total_archive_size=0
