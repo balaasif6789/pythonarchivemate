@@ -9,8 +9,6 @@ index=0
 for dir in dirs:
 
     total+=1
-    print dir
-    print ('\n')
     total_size=0
 
     for root, dirs, files in os.walk(dir):
